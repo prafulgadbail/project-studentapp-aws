@@ -1,6 +1,17 @@
 pipeline {
 
-    agent any
+    agent {
+        label 'build-agent'
+    }
+
+    stages {
+
+        stage('Test') {
+            steps {
+                sh 'hostname'
+            }
+        }
+    }
 
     stages {
 
